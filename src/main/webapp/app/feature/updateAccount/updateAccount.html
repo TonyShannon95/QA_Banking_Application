@@ -1,0 +1,20 @@
+<div class="panel panel-default" ng-controller="updateAccountController as updAccCtrl">
+	    <div class="panel-heading">Update Account Page</div>
+	    <div class="panel-body">
+	     <div>
+   		   <form>
+          First name:
+          <input  type="text"  ng-model="updAccCtrl.firstName"  required>*
+         	<br>
+        	Second name:
+        	<input  type="text" ng-model="updAccCtrl.secondName"  required >*
+			<br>
+        	Account Number:
+        	<input  type="text"  ng-model="updAccCtrl.accountNumber" required>* This must be 4 numbers
+			<br>
+      		<button class="btn" ng-click="updAccCtrl.UpdateThisAccount()">Update Account</button>
+      		</form>
+      		<a ui-sref="account" ng-click="account()" </a>Go To Accounts 
+	 	</div>
+	 </div>	
+</div>

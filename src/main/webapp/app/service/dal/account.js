@@ -2,24 +2,26 @@
 
 (function () {
 
-    function AccountDal (dal) {
+    function AccountDal (dal,$log) {
 
         this.getAccounts = function () {
+        	$log.log("Account dal get accounts");
             return dal.http.GET("rest/account/json");
         };
 
-        this.saveAccount = function (accountToSave) {
-            return dal.http.POST("rest/account/json", accountToSave);
+        this.saveAccount = function (accSave) {
+            return dal.http.POST("rest/account/json", accSave);
         };
 
-        this.updateAccount = function (accountToUpdate) {
-            return dal.http.PUT("rest/account/json/", accountToUpdate);
+        this.updateAccount = function (accUpdate) {
+            return dal.http.PUT("rest/account/json", accUpdate);
         };
 
         this.deleteAccount = function (accountToDelete) {
-            return dal.http.DELETE("/rest/account/json/", accountToDelete);
+        console.log(accountToDelete.id);
+            return dal.http.DELETE("rest/account/json/", accountToDelete);
         };
     }
     
-    angular.module("accountApp").service("accountDal", ["dal", AccountDal]);
+    angular.module("accountApp").service("accountDal", ["dal",'$log', AccountDal]);
 }());

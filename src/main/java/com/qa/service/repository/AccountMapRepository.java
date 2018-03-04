@@ -63,5 +63,12 @@ public class AccountMapRepository implements AccountRepository {
 		Account account = new Account("Joe", "Bloggs", "1234", transactions);
 		accountMap.put(1L, account);
 	}
+	
+	@Override
+	public String updateAccount(String accountToUpdate) 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

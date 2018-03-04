@@ -12,7 +12,13 @@
 	        </div>
 	        <ul class="nav navbar-nav">
 	            <li><a ui-sref="dashboard">Dashboard</a></li>
-	            <li><a ui-sref="account">Account</a></li>
+				<li dropdown-toggle" data-toggle="dropdown">
+            		<a>Account</a>        
+            	</li>
+            	<div class="dropdown-menu">
+      				<li><a class="dropdown-item" ui-sref="account">Get All Accounts</a></li>
+					<li><a class="dropdown-item" ui-sref="addAccount">Add Account</a></li>
+    			</div>	
 	        </ul>
 	    </div>
 	</nav>
@@ -36,6 +42,9 @@
     
     <script src="app/feature/account/account-controller.js"></script>
     <script src="app/feature/dashboard/dashboard-controller.js"></script>
+    <script src="app/feature/addAccount/addAccountController.js"></script>
+    <script src="app/feature/accountDetails/accountDetailsController.js"></script>
+    <script src="app/feature/updateAccount/updateAccount-controller.js"></script>
     </div>
 </body>
 </html>

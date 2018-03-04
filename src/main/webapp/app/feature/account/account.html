@@ -6,14 +6,20 @@
         	<h3><span>Accounts table</span></h3>
         	<table class="table">
         		<tr>
+        			<th>{{'id' | uppercase}}</th>
         			<th>{{'first_name' | uppercase}}</th>
         			<th>{{'surname' | uppercase}}</th>
         			<th>{{'account_number' | uppercase}}</th>
+        			<th>{{'Delete' | uppercase}}</th>
+        			<th>{{'Edit' | uppercase}}</th>
         		</tr>
         		<tr ng-repeat="account in accountCtrl.accounts">
+        			<td>{{account.id}}</td>
         			<td>{{account.firstName}}</td>
         			<td>{{account.secondName}}</td>
         			<td>{{account.accountNumber}}</td>
+        			<td><button class="delbtn" ng-click="accountCtrl.deleteAccount(account.id)">Delete</button></td>
+        			<td><button class="editbtn" ng-click="accountCtrl.update(account)">Edit</button></td>
         		</tr>
         	</table>
         </div>

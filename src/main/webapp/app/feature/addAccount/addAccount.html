@@ -1,0 +1,21 @@
+<div class="panel panel-default" ng-controller="addAccountController as addAccCtrl">
+	    <div class="panel-heading">Add Account Page</div>
+	    
+	    <div>
+	    	<form>
+  				First name:<br>
+  				<input type="text" name="firstName" ng-model="addAccCrtl.currentFirstN">
+  				<br>
+  				Last name:<br>
+  				<input type="text" name="lastName" ng-model="addAccCrtl.currentSecondN">
+  				<br>
+  				Account Number:<br>
+  				<input type="text" name="accountNumber" ng-model="addAccCrtl.currentAccountN">
+  				<br><br>
+  				<input type="submit" value="Create Account" ng-click="addAccCtrl.addThemDetailsIn(addAccCrtl.currentFirstN, addAccCrtl.currentSecondN, addAccCrtl.currentAccountN)">
+  				<br><br>
+  				<a ui-sref="account" ng-click="addCtrl.addThatAccountThere()" </a>Go To Accounts
+				</form> 
+	    </div>
+	    
+</div>
